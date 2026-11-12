@@ -37,6 +37,19 @@
 
   document.querySelectorAll('form[data-todo]').forEach((f) => f.addEventListener('submit', (e) => e.preventDefault()));
 
+  const oval = document.querySelector('.company__oval');
+  const sub = document.querySelector('.company__sub');
+  if (oval && window.matchMedia('(min-width: 960px)').matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const box = oval.parentElement;
+    const move = () => {
+      const r = box.getBoundingClientRect();
+      const t = (r.top + r.height / 2 - window.innerHeight / 2) / window.innerHeight;
+      oval.style.transform = `translateY(${t * -40}px) rotate(${-28 + t * 6}deg)`;
+      if (sub) sub.style.transform = `translateY(${t * 60}px)`;
+    };
+    window.addEventListener('scroll', move, { passive: true });
+    move();
+  }
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const rotate = (imgs, ms, list) => {
     if (imgs.length < 2 || reduce) return;
@@ -47,12 +60,6 @@
       imgs[i].classList.add('is-on'); if (list[i]) list[i].classList.add('is-on');
     }, ms);
   };
-  rotate([...document.querySelectorAll('.fv__photo img')], 4500, []);
-  const band = document.querySelector('.fv__band');
-  if (band && header) {
-    const onBand = () => header.classList.toggle('is-scrolled', window.scrollY > band.offsetHeight - header.offsetHeight);
-    window.addEventListener('scroll', onBand, { passive: true });
-    onBand();
-  }
+  rotate([...document.querySelectorAll('.fv__photo img')], 4500, [...document.querySelectorAll('.fv__dots li')]);
   rotate([...document.querySelectorAll('.works__photo img')], 3500, [...document.querySelectorAll('.works__list li')]);
 })();
