@@ -75,8 +75,8 @@
     --sp-p: 20px;
     --sp-b: 40px;
     --sp-g: 64px;
-    --sp-s: 120px;
-    --sec-y: 160px;
+    --sp-s: 96px;
+    --sec-y: 112px;
     --gutter: 48px;
     --frame: 16px;
     --header-h: 72px;
@@ -84,5 +84,5 @@
   }
 }
 @media (min-width: 1600px) {
-  :root { --fs-body: 17px; --wrap: 1400px; --sp-s: 140px; --sec-y: 190px; }
+  :root { --fs-body: 17px; --wrap: 1400px; --sp-s: 112px; --sec-y: 136px; }
 }
