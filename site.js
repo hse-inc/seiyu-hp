@@ -62,4 +62,14 @@
   };
   rotate([...document.querySelectorAll('.fv__photo img')], 4500, [...document.querySelectorAll('.fv__dots li')]);
   rotate([...document.querySelectorAll('.works__photo img')], 3500, [...document.querySelectorAll('.works__list li')]);
+  const box = document.querySelector('.lightbox');
+  if (box) {
+    const big = box.querySelector('img');
+    document.querySelectorAll('.gallery__btn').forEach((b) => b.addEventListener('click', () => {
+      const im = b.querySelector('img');
+      big.src = b.dataset.full; big.alt = im.alt; big.width = im.width; big.height = im.height;
+      box.showModal();
+    }));
+    box.addEventListener('click', (e) => { if (e.target === box || e.target.closest('.lightbox__close')) box.close(); });
+  }
 })();
