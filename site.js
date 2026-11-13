@@ -67,7 +67,7 @@
     const big = box.querySelector('img');
     document.querySelectorAll('.gallery__btn').forEach((b) => b.addEventListener('click', () => {
       const im = b.querySelector('img');
-      big.src = b.dataset.full; big.alt = im.alt; big.width = im.width; big.height = im.height;
+      big.src = im.currentSrc || im.src; big.alt = im.alt; big.width = im.width; big.height = im.height;
       box.showModal();
     }));
     box.addEventListener('click', (e) => { if (e.target === box || e.target.closest('.lightbox__close')) box.close(); });
