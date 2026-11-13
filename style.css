@@ -201,9 +201,7 @@
 
 .contact__in { display: grid; gap: var(--sp-g); max-width: 760px; }
 
-@media (max-width: 599px) {
-  .fv__body::before { content: ""; position: absolute; inset: -40px -24px -32px; z-index: -1; background: linear-gradient(180deg, var(--c-shade-0), var(--c-shade) 30%, var(--c-shade) 75%, var(--c-shade-0)); }
-}
+.fv__body::before { content: ""; position: absolute; inset: -40px -24px -32px; z-index: -1; background: linear-gradient(180deg, var(--c-shade-0), var(--c-shade) 30%, var(--c-shade) 75%, var(--c-shade-0)); }
 .field__label .field__req { background: var(--c-sub-deep); }
 
 .sub-hero { position: relative; overflow: hidden; border-radius: 0 0 var(--radius) var(--radius); background: var(--c-pale); text-align: center; }
@@ -343,7 +341,7 @@
 .steps .hd::after { content: ""; position: absolute; left: calc(100% + 18px); top: 8px; width: 28px; aspect-ratio: 1; background: var(--c-accent); clip-path: polygon(50% 0, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); animation: fv-spin 6s linear infinite; }
 .flow { display: grid; gap: var(--sp-b); margin-top: var(--sp-g); color: var(--c-ink); }
 .flow__item { position: relative; display: grid; grid-template-columns: 64px minmax(0, 1fr); grid-template-areas: "icon no" "icon ttl" "icon txt"; column-gap: var(--sp-p); row-gap: 2px; align-items: start; padding: var(--sp-p); border-radius: 16px; background: var(--c-base); }
-.flow__no { grid-area: no; font-family: var(--ff-en); font-weight: 700; font-size: var(--fs-small); letter-spacing: 0.12em; color: var(--c-sub); }
+.flow__no { grid-area: no; font-family: var(--ff-en); font-weight: 700; font-size: var(--fs-small); letter-spacing: 0.12em; color: var(--c-sub-deep); }
 .flow__no::before { content: "STEP "; }
 .flow__icon { grid-area: icon; display: grid; place-items: center; width: 64px; aspect-ratio: 1; border-radius: 50%; background: var(--c-pale); color: var(--c-sub); }
 .flow__icon svg { width: 34px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
@@ -362,7 +360,7 @@
   .flow__item:not(:last-child)::after { left: auto; right: -28px; top: 50%; bottom: auto; width: 24px; height: 24px; transform: translateY(-50%); clip-path: polygon(32% 18%, 78% 50%, 32% 82%); }
 }
 
-.sub-hero__il { position: absolute; right: max(var(--gutter), 6vw); bottom: 0; z-index: 1; width: clamp(34px, 4vw, 60px); animation: sway 4s ease-in-out infinite; transform-origin: 50% 100%; }
+.sub-hero__il { position: absolute; right: max(var(--gutter), 6vw); bottom: 10px; z-index: 1; width: clamp(34px, 4vw, 60px); animation: sway 4s ease-in-out infinite; transform-origin: 50% 100%; }
 .sub-hero__il--tobi { width: clamp(60px, 7vw, 110px); }
 @media (max-width: 599px) { .sub-hero__il { display: none; } }   
 
