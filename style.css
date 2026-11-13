@@ -347,9 +347,9 @@
 .entry__card { position: relative; display: grid; gap: var(--sp-p); align-content: center; justify-items: start; overflow: hidden; padding: var(--sp-g) var(--sp-b); border-radius: var(--radius); }
 .entry__card::after { content: ""; position: absolute; right: -40px; bottom: -40px; width: 200px; aspect-ratio: 1; border-radius: 50%; background-image: radial-gradient(currentColor 1.6px, transparent 1.8px); background-size: 16px 16px; opacity: 0.18; pointer-events: none; }
 .entry__card--lp { background: linear-gradient(135deg, var(--c-grad-a), var(--c-grad-b)); color: var(--c-base); }
-.entry__card--more { background: var(--c-pale); color: var(--c-sub); }
+.entry__card--more { background: var(--c-pale); color: var(--c-sub-deep); }
 .entry__en { font-family: var(--ff-en); font-size: var(--fs-small); font-weight: 700; letter-spacing: 0.2em; }
-.entry__card--lp .entry__en { color: var(--c-accent); }
+.entry__card--lp .entry__en { color: var(--c-base); }
 .entry__ttl { margin-bottom: var(--sp-1); font-size: clamp(18px, 1.8vw, 24px); font-weight: 700; line-height: 1.7; }
 .entry__card--more .entry__ttl { color: var(--c-ink); }
 @media (min-width: 960px) { .entry__in { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--sp-b); } }
